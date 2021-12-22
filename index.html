@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+      <!-- Navigation -->
+      <img src="/images/menu.png" class="menu-icon" id="hamburger">
+
+    <nav class="nav" data-aos="fade-down">
+      <img src="/images/Logo.png" alt="" class="logo" />
+      <ul>
+        <li><a href="">About</a></li>
+        <li><a href="">Services</a></li>
+        <li><a href="">Portfolio</a></li>
+        <li><a href="">Team</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Section  -->
+
+    <main class="main-section">
+      <section class="section-1" data-aos="fade-down">
+        <header class="section-header">
+          <h3 class="h3-header">HELLO WORLD!</h3>
+          <h1 class="h1-header">
+            We are creative agency.<br />We build digital work that
+          </h1>
+          <button class="button">
+            <a href=""
+              >Explore our portfolio <img src="/images/Arrow.svg" alt="" class="button-img"> </svg>
+            </a>
+          </button>
+        </header>
+
+        <div class="cards">
+            <article class="card card-red">
+                <img src="/images/Web-design-icon.svg" alt="" class="card-img">
+                <h4 class="card-title">Web Design</h4>
+                <p class="card-description">Lorem ipsum dolor, sit amet con doloribus at earum.sit amet con doloribus at.</p>
+                <img src="/images/Arrow-right-red.svg" alt="" class="card-arrow">
+            </article>
+
+            <article class="card card-blue">
+                <img src="/images/Planning-icon.svg" alt="" class="card-img">
+                <h4 class="card-title">Web Design</h4>
+                <p class="card-description">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                <img src="/images/Arrow-right-blue.svg" alt="" class="card-arrow">
+            </article>
+
+            <article class="card card-green">
+                <img src="/images/Web-icon.svg" alt="" class="card-img">
+                <h4 class="card-title">Web Design</h4>
+                <p class="card-description">Lorem, ipsum dolor sit amet consectetur adipisicing elitagnam.
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elitagnam. amet consectetur adipisicing elitagnam
+                </p>
+                <img src="/images/Arrow-right-green.svg" alt="" class="card-arrow">
+            </article>
+
+
+        </div>
+      </section>
+      <div class="slider" data-aos="fade-up">
+          <div class="slides">
+              <input type="radio" name="radio-btn" id="radio1">
+              <input type="radio" name="radio-btn" id="radio2">
+              <input type="radio" name="radio-btn" id="radio3">
+              <input type="radio" name="radio-btn" id="radio4">
+
+              <div class="slide first">
+                  <img src="/images/background1.png" alt="" class="image">
+              </div>
+
+              <div class="slide">
+                <img src="/images/background2.jpg" alt="" class="image">
+            </div>
+
+            <div class="slide">
+                <img src="/images/background3.jpg" alt="" class="image">
+            </div>
+
+            <div class="slide">
+              <img src="/images/background3.jpg" alt="" class="image">
+          </div>
+
+            <!-- Automatic navigation -->
+            <div class="navigation-auto">
+              <div class="auto-btn1"></div>
+              <div class="auto-btn2"></div>
+              <div class="auto-btn3"></div>                
+            </div>
+          </div>
+          <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+          </div>
+      </div>
+
+
+      
+    </main>
+     <!-- SLIDER SCRIPT -->
+    <script>
+      var counter = 1;
+      document.getElementById('radio1').checked = true;
+      setInterval(function() {
+        document.getElementById('radio1').checked = true;
+        document.getElementById('radio' + counter).checked = true;
+        counter++;
+        if (counter > 4) {
+          counter = 1
+        }
+      }, 4000);
+      
+    </script>
+
+    <script src="/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
